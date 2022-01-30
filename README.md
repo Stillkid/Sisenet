@@ -32,7 +32,7 @@ How?
 
 - A/multiple message(s) get(s) serialized into a Packet DWORD by DWORD.
 - A packet compressed into its most efficient state as quickly as possible.
-- All messages in a packet are encrypted.
+- All messages in a packet are encrypted. (could have initial pubkey thing here, otw only on normal message packets)
 - A packet header is generated based upon these messages and user specified requirements.
 	
 	[PACKET_CONNECT]
