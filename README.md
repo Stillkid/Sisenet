@@ -26,13 +26,13 @@ I also believe there is a need for such a library to exist out there, fully open
 with ease of use and not so much complicated bs. 
 
 As they say, "overengineered code for too many cases".
-This is what i believe alot of code is, rather than keeping things simple and accurate, certain code tends to be too "polymorphic" and extendable.
+This is what i believe alot of code is, rather than keeping things simple and accurate, certain code tends to be too extendable.
 
 How?
 
 - A/multiple message(s) get(s) serialized into a Packet DWORD by DWORD.
 - A packet compressed into its most efficient state as quickly as possible.
-- All messages in a packet are encrypted.
+- All messages in a packet are encrypted. (could have initial pubkey thing here, otw only on normal message packets)
 - A packet header is generated based upon these messages and user specified requirements.
 	
 	[PACKET_CONNECT]
