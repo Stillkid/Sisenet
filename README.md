@@ -26,7 +26,7 @@ I also believe there is a need for such a library to exist out there, fully open
 with ease of use and not so much complicated bs. 
 
 As they say, "overengineered code for too many cases".
-This is what i believe alot of code is, rather than keeping things simple and accurate, certain code tends to be too "polymorphic" and extendable.
+This is what i believe alot of code is, rather than keeping things simple and accurate, certain code tends to be too extendable.
 
 How?
 
