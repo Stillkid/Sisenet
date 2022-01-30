@@ -13,15 +13,7 @@ private:
 	unsigned char message_id;
 	unsigned char message_structure[8];
 
-	bool add_serialization(unsigned int message_content_type) {
-		for (unsigned char i = 0; i != sizeof(message_structure); i++) {
-			if (message_structure[i] == MESSAGE_CONTENTS_TYPE_EMPTY) {
-				message_structure[i] = (MESSAGE_CONTENT_TYPE) message_content_type;
-				return true;
-			}
-		}
-		return false;
-	}
+	bool add_serialization(const unsigned int message_content_type);
 public:
 	Message() {
 		message_id = 0;
@@ -29,23 +21,10 @@ public:
 			message_structure[i] = MESSAGE_CONTENTS_TYPE_EMPTY;
 	}
 
-	void set_id(unsigned char message_id) {
-		this->message_id = message_id;
-	}
+	void set_id(unsigned char message_id);
 
-	bool serialize_uint() {
-		return add_serialization(MESSAGE_CONTENTS_TYPE_UINT);
-	}
-
-	bool serialize_int() {
-		return add_serialization(MESSAGE_CONTENTS_TYPE_INT);
-	}
-
-	bool serialize_float() {
-		return add_serialization(MESSAGE_CONTENTS_TYPE_FLOAT);
-	}
-
-	bool serialize_string() {
-		return add_serialization(MESSAGE_CONTENTS_TYPE_STRING);
-	}
+	bool serialize_uint();
+	bool serialize_int();
+	bool serialize_float();
+	bool serialize_string();
 };

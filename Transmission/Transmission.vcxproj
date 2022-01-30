@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Message.cpp" />
     <ClCompile Include="MessageSerializer.cpp" />
     <ClCompile Include="Transmission.cpp" />
   </ItemGroup>
